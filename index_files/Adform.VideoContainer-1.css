@@ -1,0 +1,23 @@
+/* Adform Video Player Component Styles */
+.adform-video-container,
+.adform-video-container video,
+.adform-video-container .adform-video-poster {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000 no-repeat 50% 50%;
+}
+.adform-video-container-ios {
+  position: static;
+}
+.adform-video-stop,
+.adform-video-rewind,
+.adform-video-full-screen,
+.adform-video-seek-bar {
+  display: none;
+}
+.adform-video-sound {
+  right: 5px;
+}

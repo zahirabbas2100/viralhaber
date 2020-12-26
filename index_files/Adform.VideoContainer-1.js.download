@@ -1,0 +1,9 @@
+/**
+ * Adform.VideoContainer.js, version 1.1.0
+ * 
+ * Copyright Adform
+ * http://www.adform.com
+ * 
+ * Date: 2019-06-12
+ */
+var scriptSource=document.currentScript?document.currentScript.src:function(){var t=document.getElementsByTagName("script"),e=t[t.length-1];return void 0!==e.getAttribute.length?e.src:e.getAttribute("src",-1)}(),sourceString=scriptSource.toString();if(sourceString.indexOf("//s1")>-1){var title=document.getElementsByTagName("title")[0],link=document.createElement("link"),href=scriptSource.split("/");link.type="text/css",link.rel="stylesheet",link.href=href[0]+"//"+href[2]+"/banners/scripts/components/styles/Adform.VideoContainer-1.css",title.parentNode.insertBefore(link,title.nextSibling)}!function(){"use strict";function t(t){return t&&null!==t.match(/\.(jpeg|jpg|gif|png)$/)}function e(e){var n=Adform.Component&&Adform.Component.VideoPlayer;this.init=function(){if(n){var r=this,i=document.querySelector(e.container),o=window.open,c={sources:Adform.getVar("videoSources"),playOnExpand:!0,theme:e.theme||"v2"};t(Adform.getAsset(3))&&(c.poster=Adform.getAsset(3)),e.video&&Object.keys(e.video).forEach(function(t){c[t]=e.video[t]});var u=n.create(c);return window.open=function(t,e){r.pause()&&o(t,e)},this.video=u,this.play=function(){return u.video.play()},this.pause=function(){return u.video.pause()},this.stop=function(){return u.video.stop()},this.mute=function(){return u.video.mute(!0)},this.unmute=function(){return u.video.mute(!1)},this.toggleSound=function(){return u.video.mute(!u.video.muted)},e.clicktag&&u.setClicktag(e.clicktag,e.target||"_blank"),u.appendTo(i)}}}!function(t,e,n){var r,i=e.split(".");try{for(r=0;r<=i.length-2;r++){var o=i[r];t=o in t?t[o]:t[o]={}}t[i[r]]=arguments.length>2?n:{}}catch(e){throw'Cannot create property "'+i[r]+'" on '+typeof t+' "'+t+'"'}}(window,"Adf.VideoContainer",e)}();
